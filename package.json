@@ -1,0 +1,35 @@
+{
+  "name": "@fantasysea/news-aggregator-skill",
+  "version": "0.1.0",
+  "description": "Conversation-first news aggregator skill installer for Claude Code and OpenCode",
+  "type": "module",
+  "bin": {
+    "news-aggregator-skill": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "SKILL.md",
+    "templates.md",
+    "requirements.txt",
+    "scripts/",
+    "README.md"
+  ],
+  "keywords": [
+    "claude-code",
+    "opencode",
+    "skill",
+    "news",
+    "ai"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fantasysea/news-aggregator-skill.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node bin/cli.mjs --help"
+  }
+}

@@ -17,6 +17,39 @@
 
 ## 安装
 
+### 0) NPM 一键安装（推荐）
+
+无需手动复制文件：
+
+```bash
+npx @fantasysea/news-aggregator-skill install
+```
+
+只安装到 Claude Code：
+
+```bash
+npx @fantasysea/news-aggregator-skill install --target claude
+```
+
+只安装到 OpenCode：
+
+```bash
+npx @fantasysea/news-aggregator-skill install --target opencode
+```
+
+安装到自定义目录：
+
+```bash
+npx @fantasysea/news-aggregator-skill install --dir ~/.claude/skills/news-aggregator-skill
+```
+
+可选全局安装：
+
+```bash
+npm i -g @fantasysea/news-aggregator-skill
+news-aggregator-skill install
+```
+
 ### 1) 安装到 Claude Code
 
 将本目录复制到：
@@ -59,6 +92,8 @@ pip install -r requirements.txt
 
 ## 目录结构
 
+- `package.json`：npm 包与 CLI 入口定义
+- `bin/cli.mjs`：安装命令行（copy 到 Claude/OpenCode）
 - `SKILL.md`：交互规则与执行策略
 - `templates.md`：菜单模板
 - `scripts/fetch_news.py`：抓取与处理逻辑

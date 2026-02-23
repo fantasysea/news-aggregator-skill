@@ -38,3 +38,9 @@ Thumbs.db
 temp_*.json
 *.log
 reports/*.md
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
