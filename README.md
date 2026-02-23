@@ -37,6 +37,18 @@ npx @fantasysea/news-aggregator-skill install --target claude
 npx @fantasysea/news-aggregator-skill install --target opencode
 ```
 
+只安装到 Cursor：
+
+```bash
+npx @fantasysea/news-aggregator-skill install --target cursor
+```
+
+同时安装到 Claude Code + OpenCode + Cursor：
+
+```bash
+npx @fantasysea/news-aggregator-skill install --target all
+```
+
 安装到自定义目录：
 
 ```bash
@@ -62,7 +74,13 @@ news-aggregator-skill install
 
 - `~/.config/opencode/skills/news-aggregator-skill`
 
-### 3) 安装依赖
+### 3) 安装到 Cursor
+
+将本目录复制到：
+
+- `~/.cursor/skills/news-aggregator-skill`
+
+### 4) 安装依赖
 
 进入 skill 目录执行：
 

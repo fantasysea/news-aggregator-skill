@@ -13,7 +13,7 @@ function printHelp() {
   console.log(`news-aggregator-skill CLI
 
 Usage:
-  news-aggregator-skill install [--target claude|opencode|both] [--dir <absolute-path>] [--dry-run]
+  news-aggregator-skill install [--target claude|opencode|cursor|both|all] [--dir <absolute-path>] [--dry-run]
   news-aggregator-skill --help
 
 Options:
@@ -25,6 +25,8 @@ Examples:
   npx @fantasysea/news-aggregator-skill install
   npx @fantasysea/news-aggregator-skill install --target claude
   npx @fantasysea/news-aggregator-skill install --target opencode
+  npx @fantasysea/news-aggregator-skill install --target cursor
+  npx @fantasysea/news-aggregator-skill install --target all
   npx @fantasysea/news-aggregator-skill install --dir ~/.claude/skills/news-aggregator-skill
 `);
 }
@@ -63,8 +65,8 @@ function parseArgs(argv) {
     }
     if (token === "--target") {
       const next = items.shift();
-      if (!next || !["claude", "opencode", "both"].includes(next)) {
-        throw new Error("--target must be one of: claude, opencode, both");
+      if (!next || !["claude", "opencode", "cursor", "both", "all"].includes(next)) {
+        throw new Error("--target must be one of: claude, opencode, cursor, both, all");
       }
       args.target = next;
       continue;
@@ -92,9 +94,15 @@ function resolveInstallTargets(target, customDir) {
   const map = {
     claude: [path.join(homeDir, ".claude", "skills", SKILL_NAME)],
     opencode: [path.join(homeDir, ".config", "opencode", "skills", SKILL_NAME)],
+    cursor: [path.join(homeDir, ".cursor", "skills", SKILL_NAME)],
     both: [
       path.join(homeDir, ".claude", "skills", SKILL_NAME),
       path.join(homeDir, ".config", "opencode", "skills", SKILL_NAME),
+    ],
+    all: [
+      path.join(homeDir, ".claude", "skills", SKILL_NAME),
+      path.join(homeDir, ".config", "opencode", "skills", SKILL_NAME),
+      path.join(homeDir, ".cursor", "skills", SKILL_NAME),
     ],
   };
   return map[target] || map.both;
