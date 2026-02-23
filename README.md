@@ -22,43 +22,43 @@
 无需手动复制文件：
 
 ```bash
-npx @fantasysea/news-aggregator-skill install
+npx @stevegogogo/news-aggregator-skill install
 ```
 
 只安装到 Claude Code：
 
 ```bash
-npx @fantasysea/news-aggregator-skill install --target claude
+npx @stevegogogo/news-aggregator-skill install --target claude
 ```
 
 只安装到 OpenCode：
 
 ```bash
-npx @fantasysea/news-aggregator-skill install --target opencode
+npx @stevegogogo/news-aggregator-skill install --target opencode
 ```
 
 只安装到 Cursor：
 
 ```bash
-npx @fantasysea/news-aggregator-skill install --target cursor
+npx @stevegogogo/news-aggregator-skill install --target cursor
 ```
 
 同时安装到 Claude Code + OpenCode + Cursor：
 
 ```bash
-npx @fantasysea/news-aggregator-skill install --target all
+npx @stevegogogo/news-aggregator-skill install --target all
 ```
 
 安装到自定义目录：
 
 ```bash
-npx @fantasysea/news-aggregator-skill install --dir ~/.claude/skills/news-aggregator-skill
+npx @stevegogogo/news-aggregator-skill install --dir ~/.claude/skills/news-aggregator-skill
 ```
 
 可选全局安装：
 
 ```bash
-npm i -g @fantasysea/news-aggregator-skill
+npm i -g @stevegogogo/news-aggregator-skill
 news-aggregator-skill install
 ```
 
