@@ -22,12 +22,12 @@ Options:
   --dry-run  Show actions without writing files
 
 Examples:
-  npx @fantasysea/news-aggregator-skill install
-  npx @fantasysea/news-aggregator-skill install --target claude
-  npx @fantasysea/news-aggregator-skill install --target opencode
-  npx @fantasysea/news-aggregator-skill install --target cursor
-  npx @fantasysea/news-aggregator-skill install --target all
-  npx @fantasysea/news-aggregator-skill install --dir ~/.claude/skills/news-aggregator-skill
+  npx @stevegogogo/news-aggregator-skill install
+  npx @stevegogogo/news-aggregator-skill install --target claude
+  npx @stevegogogo/news-aggregator-skill install --target opencode
+  npx @stevegogogo/news-aggregator-skill install --target cursor
+  npx @stevegogogo/news-aggregator-skill install --target all
+  npx @stevegogogo/news-aggregator-skill install --dir ~/.claude/skills/news-aggregator-skill
 `);
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "@stevegogogo/news-aggregator-skill",
-  "version": "0.1.1",
-  "description": "Conversation-first news aggregator skill installer for Claude Code and OpenCode",
+  "version": "0.1.2",
+  "description": "Conversation-first news aggregator skill installer for Claude Code, OpenCode, and Cursor",
   "type": "module",
   "bin": {
     "news-aggregator-skill": "bin/cli.mjs"
